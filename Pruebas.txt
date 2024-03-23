@@ -1,0 +1,62 @@
+Prueba 1:
+
+Iniciar filtro_de_señales
+
+Frecuencia de la señal (x): -200
+Media: 1000
+Desviacion estándar: 300
+Porcentaje: 0.3
+
+Ingrese el número de iteraciones en Hz: -200
+------------------------------------------------------------
+La señal es bloqueada por el filtro: 0%
+
+
+Prueba 2:
+
+Iniciar filtro_de_señales
+
+Frecuencia de la señal (x): 300
+Media: 1000
+Desviacion estándar: 300
+Porcentaje: 0.3
+
+Ingrese el número de iteraciones en Hz: 300
+------------------------------------------------------------
+La señal es bloqueada por el filtro: 0.009345187504043475%
+
+Prueba 3:
+
+Iniciar filtro_de_señales
+
+Frecuencia de la señal (x): 845
+Media: 1000
+Desviacion estándar: 300
+Porcentaje: 0.3
+
+Ingrese el número de iteraciones en Hz: 845
+------------------------------------------------------------
+La señal pasa el filtro: 0.30168628156602423%
+
+Prueba 4:
+
+Iniciar filtro_de_señales
+
+Frecuencia de la señal (x): 2000
+Media: 1000
+Desviacion estándar: 300
+Porcentaje: 0.3
+
+Ingrese el número de iteraciones en Hz: 2000
+------------------------------------------------------------
+La señal pasa el filtro: 0.9991418698133789%
+
+
+Pregunta: ¿para qué valor de frecuencia la señal deja de ser bloqueada?
+
+La frecuencia deja de ser bloqueada a partir de 844Hz que equivalen al 0.30052463985682765% delimitado por el porcentaje que equivale a 0.3.
+
+Mensaje esperado: 
+Ingrese el número de iteraciones en Hz: 844
+------------------------------------------------------------
+La señal pasa el filtro: 0.30052463985682765%

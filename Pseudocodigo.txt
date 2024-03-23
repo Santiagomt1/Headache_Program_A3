@@ -1,0 +1,40 @@
+Program_filtro_de_señales
+// Filtrado de señales, a traves de la campana de gauss
+// Para este caso, la probabilidad acumulada se obtiene sumando la
+fdp para todas las frecuencias desde cero hasta la frecuencia de la señal de entrada.
+
+Start
+  
+  // Declaración de variables
+  Declare Integer x // Representa el valor ingresado por el usuario
+  Declare Real prob_acumulado // Representa el resultado del promedio acumulado
+
+  // Declaración de constantes
+  Declare Integer MEDIA = 1000 // Media estándar dada
+  Declare Integer DESVIACION_ESTANDAR = 300 // Desviación estándar dada
+  Declare Integer i // Representa el iterador
+  Declare Real PORCENTAJE = 0.3 // Porcentaje de probabilidad acumulada
+  Declare Real EULER = 2.7182 // Valor de Euler
+  Declare Real PI = 3.1415 // Valor de Pi
+   
+  Display "Ingrese el número de iteraciones en Hz: "
+  Input x
+
+  //Resultado por defecto
+  Set prob_acumulada = 0
+
+  // Ciclo for mediante la fdp como formula
+	For i = 1 To x 
+		fdp = ((1 / (DESVIACION_ESTANDAR * ((2 * PI)^(1/2)))) * EULER^((-1/2) *((i - MEDIA)/ DESVIACION_ESTANDAR)^2 ))
+		Set prob_acumulado += fdp
+	End For 
+
+  //Imprimir resutado
+ 
+  If prob_acumulada > PORCENTAJE Then
+      Display "La señal pasa el filtro: ", prob_acumulado, "%"
+  Else
+      Display "La señal es bloqueada por el filtro: ", prob_acumulado, "%"
+  End If
+
+End

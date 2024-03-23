@@ -1,0 +1,28 @@
+Problema: Filtrado de señales, a traves de la campana de gauss.
+
+Filtrar señales utilizando la función de probabilidad de la campana de Gauss.
+
+Entrada(s): 
+- Un número entero no negativo ingresado por el usuario
+- Variable de entrada: x (de tipo entero)
+
+Salida(s):
+- Un mensaje indicando si la señal pasa el filtro o no lo pasa
+- Un mensaje indicando el porcentaje de probabilidad acumulada
+
+Otras variables:
+- El iterador utilizado en el ciclo.
+
+Proceso(s):
+- Se debe solicitar la frecuencia (colocar un input)
+- Inicializar una variable donde se guardará el resultado (prob_acumulado)
+- Inicializar un contador para incrementar el producto en cada iteración
+- Iterar desde un valor inicial 1 hasta llegar al valor ingresado por el usuario. 
+- En este caso, como sé que el número de repeticiones está definido previamente (1 hasta x), se utiliza el ciclo For
+- Se utiliza la formula de función de densidad de probabilidad (fdp) para calcular la probabilidad acumulada 
+- En cada iteración, suma la frecuencia desde cero hasta la frecuencia de entrada y guardar el resultado
+- Finalmente, se valida si es mayor al porcentaje dado, y se verifica si pasa o no el filtro dado
+
+Restricciones: 
+- Aplica para números enteros no negativos
+- No puede ser un número decimal
